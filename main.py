@@ -122,12 +122,15 @@ def creategame():
 
     return player1, player2, board, bag, letter_id, points
 
+def draw_board(board):
+    print("\nDrawing the board...\n")
 
-def main():
+
+def play():
     # Init the game
     player1, player2, board, bag, letter_id, points = creategame()
 
-    # print the init variables
+    # print hands, board, bag
     print("\nplayer 1 :\n", player1)
     print("\nplayer 2 :\n", player2)
     print("\nboard :\n", board)
@@ -135,5 +138,32 @@ def main():
     print("\nletter_id :\n", letter_id)
     print("\npoints :\n", points)
 
-main()
+
+    # While the game is not finished (bag empty + one player without tiles OR no move possible)
+
+            # The two players draw their hands (Player 1 THEN Player 2)
+
+            # Brutforce to know the best play for player 1
+
+            # Player1 plays it
+
+            # Increment P1 score
+
+            # Player1 draw until 7 tiles
+
+            # Brutfoce to know the play for player 2
+
+            # Player 2 plays
+
+            # Increment P2 score
+
+            # Player2 draw until 7 tiles
+
+            # Print hands, board, bag
+
+
+
+
+
+play()
 
