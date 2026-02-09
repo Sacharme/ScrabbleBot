@@ -1,0 +1,81 @@
+- Main elements :
+    - two players (7 tiles each at the start of each turn)
+    - board (15x15 grid)
+    - bag (100 tiles)
+    - tiles (100 total, 98 with letters and point values, 2 blank tiles)
+
+Each player draw randomly 7 tiles from the bag.
+
+You place tiles on the board to form words vertically or horizontally.
+
+All words must connect to existing words on the grid.
+
+The first word must cover the center star square.
+
+Points are calculated by adding the values printed on each letter tile used in a word.
+
+If you place a tile on a premium square, such as double letter or triple word, your score for that turn increases accordingly.
+
+After playing your turn, you draw new tiles from the bag to maintain a hand of seven.
+
+The game ends when the bag is empty and one player uses all their tiles or when no more moves are possible.
+The player with the highest total score wins.
+
+There are 100 tiles in a standard English Scrabble bag.
+98 tiles with letters and point values
+2 blank tiles that can be used as any letter (0 points)
+
+
+
+Count,Letters,Points per Tile
+12,E,1
+9,"A, I",1
+8,O,1
+6,"N, R, T",1
+4,"D, L, S, U",1 (D is 2 points)
+3,G,2
+2,"B, C, M, P, F, H, V, W, Y","3 (B, C, M, P), 4 (F, H, V, W, Y)"
+1,"K, J, X, Q, Z","5 (K), 8 (J, X), 10 (Q, Z)"
+2,Blank Tiles,0
+
+
+
+
+
+
+
+
+Triple Word Squares (Dark Red/Orange)
+These are the highest-scoring squares on the board.
+Locations: There are 8 in total.They are located along the very outer edges: three on each side, specifically at the four corners and the exact middle of each of the four outer edges.
+A triple word square triples the total score.
+
+Double Word Squares (Pink/Yellow)
+These form a distinct diagonal pattern.
+Locations: There are 17 in total. They run diagonally from each corner toward the center, forming a large "X" shape.
+Center Square: The very middle square (the star) is a Double Word square.
+A double word square doubles the total score of the entire word.
+
+Triple Letter Squares (Dark Blue/Green)These are placed strategically to be harder to reach with long words.
+Locations: There are 12 in total. They are located in a square pattern roughly halfway between the center and the edges, never touching the outer border.
+A triple letter square triples the tile value. These bonuses are applied before any word multipliers.
+
+Double Letter Squares (Light Blue)
+These are the most common premium squares.
+Locations: There are 24 in total. They are scattered throughout the board, often placed in symmetrical "diamond" or "plus" shapes around the center and along the inner rows and columns.
+A double letter square doubles the point value of the specific tile placed on it.
+
+If the word covers two double word squares, the score is doubled and then doubled again, effectively quadrupling it.
+If a single tile is part of two different words created in one turn, such as a horizontal word and a vertical word, the letter bonus is counted for both.
+However, premium square bonuses only apply during the turn the tile is first placed. In future turns, that tile counts only for its standard face value.
+
+
+
+
+
+
+
+
+
+
+
