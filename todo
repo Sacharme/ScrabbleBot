@@ -1,1 +1,10 @@
 - draw_board function
+- import dict (and change directory of word_file)
+- check the process_wordlist function
+- brut_force_play func
+- place_word func
+- handle the situation when a player have to pick a tile but there's not enough tiles in the bag, so the player array lose len, until it reaches enventually 0
+- Handle the is_move_possible variable (set to True by default right now)
+
+
+- change the brutforce method for a much simpler
