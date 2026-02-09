@@ -1,7 +1,11 @@
+import random
+from datetime import datetime
+
 def createplayers():
-    player1 = [0] * 7
-    player2 = [0] * 7
+    player1 = [-1] * 7
+    player2 = [-1] * 7
     return player1, player2
+
 
 def createboard():
     # 0 : normal, 1 : Double Letter, 2 : Triple Letter, 3 : Double Word, 4 : Triple Word, 5 : Center
@@ -23,6 +27,7 @@ def createboard():
              ]
 
     return board
+
 
 def createbag():
     bag = [" ", " ",
@@ -54,6 +59,7 @@ def createbag():
            "Z", ]
 
     letter_id = {
+        None: -1,
         ' ': 0,
         'a': 1,
         'b': 2,
@@ -115,12 +121,14 @@ def createbag():
 
     return bag, letter_id, points
 
+
 def creategame():
     player1, player2 = createplayers()
     board = createboard()
     bag, letter_id, points = createbag()
 
     return player1, player2, board, bag, letter_id, points
+
 
 def draw_board(board):
     print("\nDrawing the board...\n")
@@ -131,39 +139,51 @@ def play():
     player1, player2, board, bag, letter_id, points = creategame()
 
     # print hands, board, bag
-    print("\nplayer 1 :\n", player1)
-    print("\nplayer 2 :\n", player2)
-    print("\nboard :\n", board)
-    print("\nbag :\n", bag)
+    print("\nHand of player 1 :\n", player1)
+    print("\nHand of player 2 :\n", player2)
+    print("\nBoard :\n", board)
+    print("\nBag :\n", bag)
     print("\nletter_id :\n", letter_id)
     print("\npoints :\n", points)
 
+    # Variables
+    randomseed = 42
+    random.seed(datetime.now().timestamp())
+    max_len_hands = 7
 
     # While the game is not finished (bag empty + one player without tiles OR no move possible)
+    while True:
+        # While each player have less than 7 tiles
+        # The two players draw their hands (Player 1 THEN Player 2)
+        for i in range(max_len_hands):
+            if player1[i] == -1:
+                # Draw a new letter from bag
+                player1[i] = random.choice(bag)
 
-            # The two players draw their hands (Player 1 THEN Player 2)
+        for i in range(max_len_hands):
+            if player2[i] == -1:
+                # Draw a new letter from bag
+                player2[i] = random.choice(bag)
 
-            # Brutforce to know the best play for player 1
+        print("\nHand of player 1 :\n", player1)
+        print("\nHand of player 2 :\n", player2)
 
-            # Player1 plays it
+        # Brutforce to know the best play for player 1
 
-            # Increment P1 score
+        # Player1 plays it
 
-            # Player1 draw until 7 tiles
+        # Increment P1 score
 
-            # Brutfoce to know the play for player 2
+        # Brutfoce to know the play for player 2
 
-            # Player 2 plays
+        # Player 2 plays
 
-            # Increment P2 score
+        # Increment P2 score
 
-            # Player2 draw until 7 tiles
-
-            # Print hands, board, bag
-
-
-
-
+        # Print hands, board, bag
+        print("\nHand of player 1 :\n", player1)
+        print("\nHand of player 2 :\n", player2)
+        print("\nboard :\n", board)
+        print("\nbag :\n", bag)
 
 play()
-
