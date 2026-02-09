@@ -1,16 +1,139 @@
-# This is a sample Python script.
+def createplayers():
+    player1 = [0] * 7
+    player2 = [0] * 7
+    return player1, player2
 
-# Press Maj+F10 to execute it or replace it with your code.
-# Press Double Shift to search everywhere for classes, files, tool windows, actions, and settings.
+def createboard():
+    # 0 : normal, 1 : Double Letter, 2 : Triple Letter, 3 : Double Word, 4 : Triple Word, 5 : Center
+    board = [4, 0, 0, 1, 0, 0, 0, 4, 0, 0, 0, 1, 0, 0, 4,
+             0, 3, 0, 0, 0, 2, 0, 0, 0, 2, 0, 0, 0, 3, 0,
+             0, 0, 3, 0, 0, 0, 1, 0, 1, 0, 0, 0, 3, 0, 0,
+             1, 0, 0, 3, 0, 0, 0, 1, 0, 0, 0, 3, 0, 0, 1,
+             0, 0, 0, 0, 3, 0, 0, 0, 0, 0, 3, 0, 0, 0, 0,
+             0, 2, 0, 0, 0, 2, 0, 0, 0, 2, 0, 0, 0, 2, 0,
+             0, 0, 1, 0, 0, 0, 1, 0, 1, 0, 0, 0, 1, 0, 0,
+             4, 0, 0, 1, 0, 0, 0, 5, 0, 0, 0, 1, 0, 0, 4,
+             0, 0, 1, 0, 0, 0, 1, 0, 1, 0, 0, 0, 1, 0, 0,
+             0, 2, 0, 0, 0, 2, 0, 0, 0, 2, 0, 0, 0, 2, 0,
+             0, 0, 0, 0, 3, 0, 0, 0, 0, 0, 3, 0, 0, 0, 0,
+             1, 0, 0, 3, 0, 0, 0, 1, 0, 0, 0, 3, 0, 0, 1,
+             0, 0, 3, 0, 0, 0, 1, 0, 1, 0, 0, 0, 3, 0, 0,
+             0, 3, 0, 0, 0, 2, 0, 0, 0, 2, 0, 0, 0, 3, 0,
+             4, 0, 0, 1, 0, 0, 0, 4, 0, 0, 0, 1, 0, 0, 4,
+             ]
+
+    return board
+
+def createbag():
+    bag = [" ", " ",
+           "E", "E", "E", "E", "E", "E", "E", "E", "E", "E", "E", "E",
+           "A", "A", "A", "A", "A", "A", "A", "A", "A",
+           "I", "I", "I", "I", "I", "I", "I", "I", "I",
+           "O", "O", "O", "O", "O", "O", "O", "O",
+           "N", "N", "N", "N", "N", "N",
+           "R", "R", "R", "R", "R", "R",
+           "T", "T", "T", "T", "T", "T",
+           "D", "D", "D", "D",
+           "L", "L", "L", "L",
+           "S", "S", "S", "S",
+           "U", "U", "U", "U",
+           "G", "G", "G",
+           "B", "B",
+           "C", "C",
+           "M", "M",
+           "P", "P",
+           "F", "F",
+           "H", "H",
+           "V", "V",
+           "W", "W",
+           "Y", "Y",
+           "K",
+           "J",
+           "X",
+           "Q",
+           "Z", ]
+
+    letter_id = {
+        ' ': 0,
+        'a': 1,
+        'b': 2,
+        'c': 3,
+        'd': 4,
+        'e': 5,
+        'f': 6,
+        'g': 7,
+        'h': 8,
+        'i': 9,
+        'j': 10,
+        'k': 11,
+        'l': 12,
+        'm': 13,
+        'n': 14,
+        'o': 15,
+        'p': 16,
+        'q': 17,
+        'r': 18,
+        's': 19,
+        't': 20,
+        'u': 21,
+        'v': 22,
+        'w': 23,
+        'x': 24,
+        'y': 25,
+        'z': 26,
+    }
+
+    points = {
+        ' ': 0,
+        'a': 1,
+        'b': 3,
+        'c': 3,
+        'd': 2,
+        'e': 1,
+        'f': 4,
+        'g': 2,
+        'h': 4,
+        'i': 1,
+        'j': 8,
+        'k': 5,
+        'l': 1,
+        'm': 3,
+        'n': 1,
+        'o': 1,
+        'p': 3,
+        'q': 10,
+        'r': 1,
+        's': 1,
+        't': 1,
+        'u': 1,
+        'v': 4,
+        'w': 4,
+        'x': 8,
+        'y': 4,
+        'z': 10,
+    }
+
+    return bag, letter_id, points
+
+def creategame():
+    player1, player2 = createplayers()
+    board = createboard()
+    bag, letter_id, points = createbag()
+
+    return player1, player2, board, bag, letter_id, points
 
 
-def print_hi(name):
-    # Use a breakpoint in the code line below to debug your script.
-    print(f'Hi, {name}')  # Press Ctrl+F8 to toggle the breakpoint.
+def main():
+    # Init the game
+    player1, player2, board, bag, letter_id, points = creategame()
 
+    # print the init variables
+    print("\nplayer 1 :\n", player1)
+    print("\nplayer 2 :\n", player2)
+    print("\nboard :\n", board)
+    print("\nbag :\n", bag)
+    print("\nletter_id :\n", letter_id)
+    print("\npoints :\n", points)
 
-# Press the green button in the gutter to run the script.
-if __name__ == '__main__':
-    print_hi('PyCharm')
+main()
 
-# See PyCharm help at https://www.jetbrains.com/help/pycharm/

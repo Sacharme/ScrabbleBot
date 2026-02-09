@@ -43,12 +43,14 @@ Count,Letters,Points per Tile
 
 
 
+Double Letter Squares (Light Blue)
+These are the most common premium squares.
+Locations: There are 24 in total. They are scattered throughout the board, often placed in symmetrical "diamond" or "plus" shapes around the center and along the inner rows and columns.
+A double letter square doubles the point value of the specific tile placed on it.
 
-
-Triple Word Squares (Dark Red/Orange)
-These are the highest-scoring squares on the board.
-Locations: There are 8 in total.They are located along the very outer edges: three on each side, specifically at the four corners and the exact middle of each of the four outer edges.
-A triple word square triples the total score.
+Triple Letter Squares (Dark Blue/Green)These are placed strategically to be harder to reach with long words.
+Locations: There are 12 in total. They are located in a square pattern roughly halfway between the center and the edges, never touching the outer border.
+A triple letter square triples the tile value. These bonuses are applied before any word multipliers.
 
 Double Word Squares (Pink/Yellow)
 These form a distinct diagonal pattern.
@@ -56,14 +58,12 @@ Locations: There are 17 in total. They run diagonally from each corner toward th
 Center Square: The very middle square (the star) is a Double Word square.
 A double word square doubles the total score of the entire word.
 
-Triple Letter Squares (Dark Blue/Green)These are placed strategically to be harder to reach with long words.
-Locations: There are 12 in total. They are located in a square pattern roughly halfway between the center and the edges, never touching the outer border.
-A triple letter square triples the tile value. These bonuses are applied before any word multipliers.
+Triple Word Squares (Dark Red/Orange)
+These are the highest-scoring squares on the board.
+Locations: There are 8 in total.They are located along the very outer edges: three on each side, specifically at the four corners and the exact middle of each of the four outer edges.
+A triple word square triples the total score.
 
-Double Letter Squares (Light Blue)
-These are the most common premium squares.
-Locations: There are 24 in total. They are scattered throughout the board, often placed in symmetrical "diamond" or "plus" shapes around the center and along the inner rows and columns.
-A double letter square doubles the point value of the specific tile placed on it.
+
 
 If the word covers two double word squares, the score is doubled and then doubled again, effectively quadrupling it.
 If a single tile is part of two different words created in one turn, such as a horizontal word and a vertical word, the letter bonus is counted for both.
